@@ -8,13 +8,12 @@ reddit = praw.Reddit(client_id=os.getenv("REDDIT_CLIENT_ID"),
                      client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
                      user_agent="ds-final-project")
 
-conn = os.getenv('DATABASE_URL') if os.getenv('IS_PROD')
-    else
-        psycopg2.connect(host=os.getenv('DB_HOST'),
-                        port=os.getenv('DB_PORT'),
-                        user=os.getenv('DB_USER'),
-                        password=os.getenv('DB_PASSWORD'),
-                        database=os.getenv('DB_DATABASE'))
+conn = os.getenv('DATABASE_URL') if os.getenv('IS_PROD') == True else psycopg2.connect(host=os.getenv('DB_HOST'),
+                                                                                    port=os.getenv('DB_PORT'),
+                                                                                    user=os.getenv('DB_USER'),
+                                                                                    password=os.getenv('DB_PASSWORD'),
+                                                                                    database=os.getenv('DB_DATABASE'))
+
 
 
 def cronjob():
