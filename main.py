@@ -15,7 +15,6 @@ conn = psycopg2.connect(host=os.getenv('DB_HOST'),
                         database=os.getenv('DB_DATABASE'))
 
 
-
 def cronjob():
     """
     Main cron job.
