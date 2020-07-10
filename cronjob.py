@@ -6,6 +6,6 @@ from main import cronjob
 
 # Create an instance of scheduler and add function.
 scheduler = BlockingScheduler()
-scheduler.add_job(cronjob, 'cron', minute='*/30 * * * *')
+scheduler.add_job(cronjob, 'interval', minutes=30)
 
 scheduler.start()
