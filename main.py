@@ -22,12 +22,23 @@ def cronjob():
     Main cron job.
     The main cronjob to be run continuously.
     """
-    k = reddit.subreddit('kanye')
 
-    cursor = conn.cursor()
-    cursor.execute("INSERT INTO subreddits(display_name, subscribers,  active_user_count, timestamp) VALUES(%s, %s, %s, %s)",
-        (k.display_name, k.subscribers, k.active_user_count, datetime.now()))
-    conn.commit()
-    cursor.close()
+    track_subreddits = [
+        'kanye',
+        'donaldtrump',
+        'JoeBiden',
+        'JoeBidenSucks',
+        'KanyeWestForPresident'
+    ]
+
+    for t in track_subreddits:
+
+        s = reddit.subreddit(t)
+
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO subreddits(display_name, subscribers,  active_user_count, timestamp) VALUES(%s, %s, %s, %s)",
+            (s.display_name, s.subscribers, s.active_user_count, datetime.now()))
+        conn.commit()
+        cursor.close()
 
     print("Tick! The time is: %s" % datetime.now())
