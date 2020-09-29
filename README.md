@@ -22,6 +22,7 @@ timestamp            datetime64[ns]
 This data is stored on a Heroku instance running Postgresql.
 
 ![joebiden](https://github.com/kenyo/final-project/tree/master/images/joebiden_df.png)
+
 ![donaldtrump](https://github.com/kenyo/final-project/tree/master/images/donaldtrump_df.png)
 
 ![kanye](https://github.com/kenyo/final-project/tree/master/images/kanye_df.png)
