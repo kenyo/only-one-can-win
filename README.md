@@ -40,6 +40,8 @@ After each timeseries was differenced they passed the Augmented Dickey Fuller te
 ## Process & Repository Contents
 
 * Sourcing and Cleaning: 
+  * main.py (main script to ping reddit api for follower counts)
+  * cron.py (triggers main.py every half hour)
   * notebooks/eda.ipynb
 * Modeling (in no particular order):
   * notebooks/joebiden_modeling.ipynb
