@@ -70,5 +70,7 @@ donaldtrump fbprophet:
 
 * Explore exogenous variables via twitter in ARIMA models
   * see how number of twitter likes affects model
-  * see how 
+  * see how twiter sentiment for each candidate's tweets affect model
+* Explore exogenous variables via polling data in ARIMA models
+* Shut down automated data collection after election
 
