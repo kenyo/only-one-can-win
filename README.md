@@ -64,9 +64,11 @@ kanye arima:
 
 donaldtrump fbprophet:
 
-![donaldtrump](https://github.com/kenyo/final-project/blob/master/images/donaldtrump_fbprophet.png?raw=true)
+![donaldtrump](https://github.com/kenyo/final-project/blob/master/images/donaldtrump_fbprophet_.png?raw=true)
 
 ## Next Steps
 
-
+* Explore exogenous variables via twitter in ARIMA models
+  * see how number of twitter likes affects model
+  * see how 
 
