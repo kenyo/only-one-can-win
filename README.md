@@ -10,7 +10,7 @@ I believe reddit is a good proxy for overall popularity because of its rich, voc
 
 ## Dataset
 
-The primary dataset was compiled since August 10, 2020 and polled how many followers and active users belonged to the joebiden, donaldtrump, and kanye subreddits every half hour. Followers and subscribers are synonymous for all intents and purposes:
+The primary dataset was compiled since August 10, 2020 and polled how many followers and active users belonged to the joebiden, donaldtrump, and kanye subreddits every half hour. In total, there were ~15k observations. Followers and subscribers are synonymous for all intents and purposes:
 
 ```
 subscribers                   int64
@@ -27,7 +27,46 @@ This data is stored on a Heroku instance running Postgresql. The steps to automa
 
 ![kanye](https://github.com/kenyo/final-project/blob/master/images/kanye_df.png?raw=true)
 
+To address the non-stationarity of the data, I differenced each time series once to produce the following dataframes:
 
+![joebiden](https://github.com/kenyo/final-project/blob/master/images/joebiden_new_subs.png?raw=true)
+
+![donaldtrump](https://github.com/kenyo/final-project/blob/master/images/donaldtrump_new_subs.png?raw=true)
+
+![kanye](https://github.com/kenyo/final-project/blob/master/images/kanye_new_subs.png?raw=true)
+
+After each timeseries was differenced they passed the Augmented Dickey Fuller test and modeling was performed on the differenced set.
+
+## Process & Repository Contents
+
+* Sourcing and Cleaning: 
+  * notebooks/eda.ipynb
+* Modeling (in no particular order):
+  * notebooks/joebiden_modeling.ipynb
+  * notebooks/donaldtrump_modeling.ipynb
+  * notebooks/kanye_modeling.ipynb
+
+Modeling notebooks run the following models to improve upon the test RMSE (root mean squared error):
+
+Baseline (training mean) => ARIMA(p,d,q) => fbprophet => darts
+
+## Findings
+
+joebiden and kanye subreddit ARIMA models performed best with RMSE's of 110.689 and 58.783 respectively. donaldtrump new subscribers were best modeled using fbprophet with and RMSE of 95.292
+
+joebiden arima:
+
+![joebiden](https://github.com/kenyo/final-project/blob/master/images/joebiden_arima.png?raw=true)
+
+kanye arima:
+
+![kanye](https://github.com/kenyo/final-project/blob/master/images/kanye_arima.png?raw=true)
+
+donaldtrump fbprophet:
+
+![donaldtrump](https://github.com/kenyo/final-project/blob/master/images/donaldtrump_fbprophet.png?raw=true)
+
+## Next Steps
 
 
 
