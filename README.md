@@ -21,7 +21,9 @@ timestamp            datetime64[ns]
 
 This data is stored on a Heroku instance running Postgresql. The steps to automate the data collection process [are detailed here](https://medium.com/@kennyoh517/diy-datasets-ba180658e9e7).
 
-![joebiden](https://github.com/kenyo/final-project/blob/master/images/joebiden_df.png?raw=true)
+![joebiden](https://github.com/kenyo/final-project/blob/master/images/joebiden_df.png?raw=true =250x)
+
+
 
 ![donaldtrump](https://github.com/kenyo/final-project/blob/master/images/donaldtrump_df.png?raw=true)
 
