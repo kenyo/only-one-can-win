@@ -1,4 +1,4 @@
-## Forecasting Reddit Community Growth 
+## Only One Can Win! Forecasting Reddit Community Growth 
 
 The goal of this project is to develop a time series forecasting model to predict how many reddit followers there will be for the subreddits belonging to each presidential candidate.
 
